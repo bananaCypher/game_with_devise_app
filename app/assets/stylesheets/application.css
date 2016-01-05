@@ -21,11 +21,24 @@
  body {
   background-image: url('http://i.imgur.com/2MzImBd.gif');
   background-size: cover;
-  color: red;
+  color: red !important;
  }
  a {
   color: yellow;
  }
  td:nth-of-type(even){
   color: hotpink;
+ }
+
+ body * {
+  background-color: rgba(0, 0, 0, 0.3)
+ }
+ input {
+  color: red;
+ }
+ textarea {
+  color: red;
+ }
+ select {
+  color: red;
  }
