@@ -1,2 +1,14 @@
 <h1>Copy#new</h1>
 <p>Find me in app/views/copy/new.html.erb</p>
+
+
+<%= form_for @copy do |f| %>
+  <%= f.label :game_id, 'Game' %>
+  <%= f.select :game_id, options_for_select(Game.games_names_ids, @game.id)%>
+  <br><br>
+  <%= f.label :console %>
+  <%= f.text_field :console %>
+  <br><br>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit %>
+<% end %>

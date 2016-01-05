@@ -19,13 +19,18 @@
   
 </div>
 
-<nav>
-  <ul>
-    <li><%= link_to 'My Account', user_path %></li>
-    <li><%= link_to 'My Copies', copies_path %></li>
-    <li><%= link_to 'Games', games_path %></li>
-  </ul>
-</nav>
+<% if current_user %>
+  <nav>
+    <ul>
+      <li><%= link_to 'My Account', user_path %></li>
+      <li><%= link_to 'My Copies', copies_path %></li>
+      <li><%= link_to 'Games', games_path %></li>
+    </ul>
+  </nav>
+<% end %>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 

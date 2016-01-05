@@ -17,3 +17,15 @@
  img {
   width: 200px;
  }
+
+ body {
+  background-image: url('http://i.imgur.com/2MzImBd.gif');
+  background-size: cover;
+  color: red;
+ }
+ a {
+  color: yellow;
+ }
+ td:nth-of-type(even){
+  color: hotpink;
+ }

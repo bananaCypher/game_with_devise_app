@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :games
-  resources :copies
+  resources :copies do
+    get 'add_game', on: :member
+  end
   
   # resources :users
   get 'user', to: 'users#show'

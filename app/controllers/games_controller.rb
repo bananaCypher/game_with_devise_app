@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :set_game, except: [:index, :new, :create]
 
 

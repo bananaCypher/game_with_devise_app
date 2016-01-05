@@ -1,2 +1,29 @@
 <h1>Copy#index</h1>
 <p>Find me in app/views/copy/index.html.erb</p>
+
+<table>
+  <th>
+    <tr>
+      <td>Name</td>
+      <td>Description</td>
+      <td>Console</td>
+      <td>Image</td>
+      <td>Actions</td>
+    </tr>
+  </th>
+  <% current_user.copies.each do |copy| %>
+    <tr>
+      <td><%= copy.game.name %></td>
+      <td><%= copy.game.description %></td>
+      <td><%= copy.console %></td>
+      <td><%= image_tag copy.game.image %></td>
+      <td>
+        <%= link_to 'Show', copy_path(copy) %>
+        <br>
+        <%= link_to 'Edit', edit_copy_path(copy) %>
+        <br>
+        <%= link_to 'Delete', copy_path(copy), method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>
