@@ -16,6 +16,9 @@
       <td><%= image_tag @game.image %></td>
       <td>
         <%= link_to 'Edit', edit_game_path(@game) %>
+        <br>
         <%= link_to 'Delete', game_path(@game), method: :delete %>
+        <br>
+        <%= link_to 'Add to my collection', add_game_copy_path(@game) %>
       </td>
     </tr>

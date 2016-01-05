@@ -8,7 +8,8 @@ class CopiesController < ApplicationController
   end
 
   def create
-    Copy.create(copy_params)
+    # More secure:
+    current_user.copies.create(copy_params)
     redirect_to copies_path
   end
 
@@ -32,6 +33,6 @@ class CopiesController < ApplicationController
 
   private
   def copy_params
-    params.require(:copy).permit(:game_id, :console, :user_id)
+    params.require(:copy).permit(:game_id, :console)
   end
 end

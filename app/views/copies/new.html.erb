@@ -9,6 +9,8 @@
   <%= f.label :console %>
   <%= f.text_field :console %>
   <br><br>
-  <%= f.hidden_field :user_id, value: current_user.id %>
   <%= f.submit %>
 <% end %>
+
+
+<!-- f.collection_select(:game_id, Game.all, :name, :id) -->
