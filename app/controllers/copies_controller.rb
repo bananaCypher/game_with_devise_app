@@ -1,4 +1,4 @@
-class CopyController < ApplicationController
+class CopiesController < ApplicationController
   def index
   end
 

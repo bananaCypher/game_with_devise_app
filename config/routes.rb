@@ -1,35 +1,12 @@
 Rails.application.routes.draw do
-  get 'copy/index'
 
-  get 'copy/new'
+  resources :games
+  resources :copies
+  
+  # resources :users
+  get 'user/:id', to: 'user#show'
 
-  get 'copy/create'
-
-  get 'copy/show'
-
-  get 'copy/edit'
-
-  get 'copy/update'
-
-  get 'copy/destroy'
-
-  get 'user/show'
-
-  get 'game/index'
-
-  get 'game/new'
-
-  get 'game/create'
-
-  get 'game/show'
-
-  get 'game/edit'
-
-  get 'game/update'
-
-  get 'game/destroy'
-
-  root to: 'game#index'
+  root to: 'games#index'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
