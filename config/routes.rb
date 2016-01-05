@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :copies
   
   # resources :users
-  get 'user/:id', to: 'user#show'
+  get 'user', to: 'users#show'
 
   root to: 'games#index'
 

@@ -8,8 +8,20 @@
 </head>
 <body>
 
+<div class="login">
+  <% if current_user %>
+    <%= current_user.email %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign In", new_user_session_path %>
+    <%= link_to "Register", new_user_registration_path %>
+  <% end %>
+  
+</div>
+
 <nav>
   <ul>
+    <li><%= link_to 'My Account', user_path %></li>
     <li><%= link_to 'My Copies', copies_path %></li>
     <li><%= link_to 'Games', games_path %></li>
   </ul>
